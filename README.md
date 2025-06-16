@@ -99,4 +99,4 @@ MIT License. Feel free to use and adapt for personal or professional purposes.
 ## 👨‍💻 Author
 
 **Abhishek Totre**  
-Connect on [LinkedIn](https://www.linkedin.com/in/abhishektotre981/) | GitHub: [yourusername](https://github.com/abhishektotre)
+Connect on [LinkedIn](https://www.linkedin.com/in/abhishektotre981/) | GitHub: [Abhishektotre](https://github.com/abhishektotre)
