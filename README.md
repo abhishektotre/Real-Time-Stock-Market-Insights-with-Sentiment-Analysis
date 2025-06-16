@@ -13,82 +13,54 @@ This project offers a **real-time stock monitoring dashboard** that combines **m
 
 ---
 
-## 🔧 Tech Stack
+![Dashboard Preview](./screenshot.png)
 
-| Component         | Tool/Library                     |
-|------------------|----------------------------------|
-| Dashboard         | [Streamlit](https://streamlit.io) |
-| Sentiment Model   | [FinBERT (HuggingFace)](https://huggingface.co/ProsusAI/finbert) |
-| Data Source       | [Yahoo Finance](https://finance.yahoo.com) via `yfinance` |
-| Language          | Python 3.8+                      |
+Live market analysis platform with sentiment integration powered by:
+- Alpha Vantage API
+- NewsAPI
+- Dash/Plotly
 
----
+## Features
+- Real-time stock price tracking
+- Dual sentiment analysis (TextBlob + VADER)
+- News feed integration
+- Interactive OHLC charts
+- Auto-refreshing data
 
-## 🗂️ Project Structure
-
-```
-real_time_stock_sentiment/
-├── app/                   # Streamlit dashboard
-├── config/                # API keys, config files
-├── data/                  # Tweet/news data (if applicable)
-├── models/                # FinBERT model cache
-├── notebooks/             # Jupyter notebooks for testing
-├── src/                   # Core logic for data fetching & sentiment
-├── utils/                 # Helper functions
-├── tests/                 # Unit tests
-├── .env                   # Environment variables
-├── requirements.txt       # Python dependencies
-├── run.py                 # Entry point
-└── README.md              # Project documentation
-```
-
----
-
-## ⚙️ Installation
-
+## Installation
 ```bash
-git clone https://github.com/yourusername/real_time_stock_sentiment.git
-cd real_time_stock_sentiment
+git clone https://github.com/yourusername/stock-insights.git
+cd stock-insights
 pip install -r requirements.txt
 ```
 
-**Add your API keys** to the `.env` file:
-```
-TWITTER_BEARER_TOKEN=your_token_here
-NEWS_API_KEY=your_token_here
-```
-
----
-
-## ▶️ Run the Dashboard
-
-```bash
-python run.py
+## Configuration
+1. Get API keys:
+   - [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
+   - [NewsAPI](https://newsapi.org/register)
+2. Create `.env` file:
+```ini
+ALPHA_VANTAGE_API_KEY=your_key_here
+NEWS_API_KEY=your_newsapi_key
 ```
 
-Then go to: [http://localhost:8501](http://localhost:8501)
-
----
-
-## 🧪 Sample Output
-
+## Usage
+```powershell
+# Windows
+$env:ALPHA_VANTAGE_API_KEY="your_key"; $env:NEWS_API_KEY="your_news_key"; python app.py
 ```
-News: "Tesla shares rise after strong Q1 earnings report."
-→ Sentiment: POSITIVE (0.91)
-```
+Access dashboard at: http://localhost:8050
 
-Live price chart will display below.
+## Dashboard Preview
+![Dashboard Interface](./screenshot.png)
 
----
+## Contributing
+1. Fork the repository
+2. Create feature branch
+3. Submit PR with detailed description
 
-## 🧱 Future Enhancements
-
-- Integrate real Twitter/X and News API
-- Add forecasting using LSTM or Prophet
-- Alert system based on price + sentiment shift
-- Cloud deployment on AWS or Streamlit Cloud
-
----
+## License
+MIT
 
 ## 📌 License
 
